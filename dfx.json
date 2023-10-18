@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "rng_backend": {
+      "candid": "src/rng_backend/rng_backend.did",
+      "package": "rng_backend",
+      "type": "rust"
+    },
+    "rng_frontend": {
+      "dependencies": [
+        "rng_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/rng_frontend/src/index.html"
+      },
+      "source": [
+        "src/rng_frontend/assets",
+        "dist/rng_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
